@@ -1,0 +1,23 @@
+{
+    "name": "tigron/skeleton-template-smarty",
+    "description": "Smarty templating for Skeleton",
+    "type": "library",
+    "require": {
+		"smarty/smarty": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tigron BVBA",
+            "email": "support@tigron.be"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/tigron/skeleton-template-twig",
+        "issues": "https://github.com/tigron/skeleton-template-twig/issues"
+    },
+    "autoload": {
+        "psr-4": { "Skeleton\\Template\\Smarty\\": "lib/Skeleton/Template/Smarty/" }
+    }
+}
+
