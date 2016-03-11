@@ -13,8 +13,8 @@
         }
     ],
     "support": {
-        "source": "https://github.com/tigron/skeleton-template-twig",
-        "issues": "https://github.com/tigron/skeleton-template-twig/issues"
+        "source": "https://github.com/tigron/skeleton-template-smarty",
+        "issues": "https://github.com/tigron/skeleton-template-smarty/issues"
     },
     "autoload": {
         "psr-4": { "Skeleton\\Template\\Smarty\\": "lib/Skeleton/Template/Smarty/" }
