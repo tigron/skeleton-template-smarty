@@ -7,9 +7,9 @@ use \Michelf\MarkdownExtra;
  */
 function smarty_modifier_datetime_format($string, $format = '%d/%m/%Y %H:%M:%S', $default_date = '') {
     if ($string != '') {
-        $timestamp = smarty_make_timestamp($string);
+        $timestamp = strtotime($string);
     } elseif ($default_date != '') {
-        $timestamp = smarty_make_timestamp($default_date);
+        $timestamp = strtotime($default_date);
     } else {
         return;
     }
@@ -48,7 +48,7 @@ function smarty_function_snippet($params, &$smarty) {
 	 *   - source (the source file in WEB_PATH . /snippet/
 	 *   - * (will be converted to <snippet_name>_*
 	 */
-	$template = new Template();
+	$template = new \Skeleton\Template\Template();
 
 	if (empty($params['source'])) {
 		throw new Exception('source required for snippet');
@@ -69,7 +69,7 @@ function smarty_function_snippet($params, &$smarty) {
 	foreach ($params as $key => $value) {
 		$template->assign($key, $value);
 	}
-	$template->set_template_directory(Application::Get()->template_path);
+	$template->set_template_directory(\Skeleton\Core\Application::Get()->template_path);
 	$content = $template->render('../snippet/' . $source);
 
 	return $content;
