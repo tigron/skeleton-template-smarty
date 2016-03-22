@@ -42,7 +42,7 @@ class Smarty {
 	 * @param string $directory
 	 */
 	public function add_template_directory($directory) {
-		$this->smarty->setTemplateDir($directory);
+		$this->smarty->addTemplateDir($directory);
 	}
 
 	/**
