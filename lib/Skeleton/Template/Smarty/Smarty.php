@@ -51,7 +51,7 @@ class Smarty {
 	 * @access public
 	 * @param Translation $translation
 	 */
-	public function set_translation(Translation $translation) {
+	public function set_translation(\Skeleton\I18n\Translation $translation) {
 		$environment = array(
 			'translation' => $translation
 		);
