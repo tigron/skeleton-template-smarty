@@ -33,6 +33,8 @@ class Smarty {
 		$this->smarty->registerPlugin('modifier', 'datetime_format', 'smarty_modifier_datetime_format');
 		$this->smarty->registerPlugin('function', 'snippet', 'smarty_function_snippet');
 		$this->smarty->registerPlugin('modifier', 'markdown', 'smarty_modifier_markdown');
+		$this->smarty->debugging = Config::$debug;
+		$this->smarty->error_reporting = Config::$error_reporting;
 	}
 
 	/**
