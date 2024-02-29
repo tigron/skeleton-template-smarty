@@ -85,4 +85,16 @@ class Smarty {
 	public function render($template) {
 		return $this->smarty->fetch($template);
 	}
+
+	/**
+	 * Validate
+	 *
+	 * @access public
+	 * @param string $template
+	 * @param string &$error
+	 * @return bool
+	 */
+	public function validate($template, &$error): bool {
+		throw new \Exception('Not yet implemented');
+	}
 }
